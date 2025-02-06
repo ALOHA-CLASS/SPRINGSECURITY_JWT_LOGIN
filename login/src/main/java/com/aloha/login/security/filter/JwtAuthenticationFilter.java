@@ -109,7 +109,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String jsonString = ObjectMapper.writeValueAsString(user);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        // jsonStrin : "{ 'username' : 'aloha', 'name' : '사용자', ... }"
+        // jsonString : "{ 'username' : 'aloha', 'name' : '사용자', ... }"
         PrintWriter printWriter = response.getWriter();
         printWriter.write(jsonString);
         printWriter.flush();

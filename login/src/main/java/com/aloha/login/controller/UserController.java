@@ -33,7 +33,7 @@ public class UserController {
 
     /**
      * 사용자 정보 조회
-     * @param customUser
+     * @param customUser 
      * @return
      */
     @GetMapping("/info")

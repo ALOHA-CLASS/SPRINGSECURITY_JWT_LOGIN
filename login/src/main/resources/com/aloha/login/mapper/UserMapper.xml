@@ -60,10 +60,12 @@
     <!-- 회원 정보 수정 -->
     <update id="update">
         UPDATE users
-           SET password = #{password}
-              ,name = #{name}
-              ,email = #{email}
-              ,updated_at = now()
+            <set>
+                <if test="password != null">password = #{password},</if>
+                <if test="name != null">name = #{name},</if>
+                <if test="email != null">email = #{email},</if>
+                updated_at = now()
+            </set>
         WHERE username = #{username}
     </update>
 
